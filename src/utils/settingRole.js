@@ -62,14 +62,19 @@ function setttingRole() {
 }
 
 function runData() {
-  var datas = [];
+  var xData = [];
+  var yData = [];
 
   for (var i = 0 ; i < 1000 ; i++) {
     const data = setttingRole();
-    datas.push(data);
+    xData.push(data.x);
+    yData.push(data.y);
   }
 
-  console.log('datas', datas)
+  return {
+    xData,
+    yData,
+  }
 }
 
 export {
