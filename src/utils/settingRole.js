@@ -12,7 +12,12 @@ function setttingRole() {
 
   const rolesAfterShuffle = shuffle(roles);
 
-  console.log('rolesAfterShuffle', rolesAfterShuffle);
+  const result = {
+    roles: rolesAfterShuffle,
+    numberOfWitch: rolesAfterShuffle.findIndex(r => r === WITCH) + 1,
+  }
+
+  console.log('rolesAfterShuffle', result);
 }
 
 export {
