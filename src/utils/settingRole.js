@@ -17,25 +17,38 @@ function getAllIndexes(arr, val) {
 
 function conjectureFormula(allOfNumbersOfWolf) {
   const wolfSum = allOfNumbersOfWolf.reduce((prev, curr) => prev + curr, 0);
+  const average = (wolfSum) / 4;
   
-  return ((wolfSum) / 4) + 1;
+  return Math.round((average) + 1);
 }
 
 function setttingRole() {
   const roles = [WOLF, WOLF, WOLF, WOLF, SEER, WITCH, HUNTER, IDIOT, VILLAGER, VILLAGER, VILLAGER, VILLAGER];
 
   const rolesAfterShuffle = shuffle(roles);
+  const numberOfSeer = rolesAfterShuffle.findIndex(r => r === SEER) + 1;
+  const numberOfWitch = rolesAfterShuffle.findIndex(r => r === WITCH) + 1;
+  const numberOfHunter = rolesAfterShuffle.findIndex(r => r === HUNTER) + 1;
+  const numberOfIdiot = rolesAfterShuffle.findIndex(r => r === IDIOT) + 1;
+  const allOfNumbersOfWolf = getAllIndexes(rolesAfterShuffle, WOLF);
 
   const result = {
     roles: rolesAfterShuffle,
-    numberOfSeer: rolesAfterShuffle.findIndex(r => r === SEER) + 1,
-    numberOfWitch: rolesAfterShuffle.findIndex(r => r === WITCH) + 1,
-    numberOfHunter: rolesAfterShuffle.findIndex(r => r === HUNTER) + 1,
-    numberOfIdiot: rolesAfterShuffle.findIndex(r => r === IDIOT) + 1,
-    allOfNumbersOfWolf: getAllIndexes(rolesAfterShuffle, WOLF),
+    numberOfSeer,
+    numberOfWitch,
+    numberOfHunter,
+    numberOfIdiot,
+    allOfNumbersOfWolf,
+    isHitWitch: conjectureFormula(allOfNumbersOfWolf) === numberOfWitch,
+    isHitGod: (
+      conjectureFormula(allOfNumbersOfWolf) === numberOfSeer || 
+      conjectureFormula(allOfNumbersOfWolf) === numberOfWitch ||
+      conjectureFormula(allOfNumbersOfWolf) === numberOfHunter ||
+      conjectureFormula(allOfNumbersOfWolf) === numberOfIdiot
+    ),
   }
 
-  console.log('rolesAfterShuffle', result, conjectureFormula(result.allOfNumbersOfWolf));
+  console.log('rolesAfterShuffle', result);
 }
 
 export {
