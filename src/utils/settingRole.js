@@ -35,6 +35,12 @@ function setttingRole() {
   const numberOfHunter = rolesAfterShuffle.findIndex(r => r === HUNTER) + 1;
   const numberOfIdiot = rolesAfterShuffle.findIndex(r => r === IDIOT) + 1;
   const allOfNumbersOfWolf = getAllIndexes(rolesAfterShuffle, WOLF);
+  const sumOfNumberOfWolf = allOfNumbersOfWolf.reduce((prev, curr) => prev + curr, 0);
+
+  const data = {
+    x: sumOfNumberOfWolf,
+    y: numberOfWitch
+  }
 
   const result = {
     roles: rolesAfterShuffle,
@@ -52,7 +58,7 @@ function setttingRole() {
     ),
   }
 
-  console.log('rolesAfterShuffle', result);
+  console.log('rolesAfterShuffle', result, data);
 }
 
 export {
