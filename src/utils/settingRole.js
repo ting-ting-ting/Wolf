@@ -18,6 +18,10 @@ function getAllIndexes(arr, val) {
 function conjectureFormula(allOfNumbersOfWolf) {
   const wolfSum = allOfNumbersOfWolf.reduce((prev, curr) => prev + curr, 0);
   const average = (wolfSum) / 4;
+
+  if (average - Math.floor(average) <= 0.5) {
+    return Math.floor((average) + 1);
+  }
   
   return Math.round((average) + 1);
 }
