@@ -1,11 +1,11 @@
-import { setttingRole } from './utils/settingRole';
+import { runData } from './utils/settingRole';
 import './App.css';
 
 
 function App() {
   return (
     <div className="App">
-      <button type="button" onClick={setttingRole}>
+      <button type="button" onClick={runData}>
         wolf
       </button>
     </div>

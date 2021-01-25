@@ -58,7 +58,18 @@ function setttingRole() {
     ),
   }
 
-  console.log('rolesAfterShuffle', result, data);
+  return data;
+}
+
+function runData() {
+  var datas = [];
+
+  for (var i = 0 ; i < 1000 ; i++) {
+    const data = setttingRole();
+    datas.push(data);
+  }
+
+  console.log('datas', datas)
 }
 
 export {
@@ -69,4 +80,5 @@ export {
   IDIOT,
   VILLAGER,
   setttingRole,
+  runData,
 }
