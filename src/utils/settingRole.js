@@ -105,7 +105,9 @@ function runData() {
 function runLinearRegression() {
   const datas = runData();
 
-  
+  const lr = linearRegression(datas.yData, datas.xData);
+
+  console.log('lr', lr);
 }
 
 export {
@@ -117,4 +119,5 @@ export {
   VILLAGER,
   setttingRole,
   runData,
+  runLinearRegression,
 }
