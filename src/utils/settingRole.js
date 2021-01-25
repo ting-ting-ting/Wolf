@@ -1,0 +1,6 @@
+const WOLF = 'ROLE_WOLF';
+const SEER = 'ROLE_SEER';
+const WITCH = 'ROLE_WITCH';
+const HUNTER = 'ROLE_HUNTER';
+const IDIOT = 'ROLE_IDIOT';
+const VILLAGER = 'ROLE_VILLAGER';
