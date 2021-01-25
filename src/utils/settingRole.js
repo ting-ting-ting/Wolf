@@ -42,13 +42,9 @@ function linearRegression(y,x){
 
 function conjectureFormula(allOfNumbersOfWolf) {
   const wolfSum = allOfNumbersOfWolf.reduce((prev, curr) => prev + curr, 0);
-  const average = (wolfSum) / 4;
-
-  if (average - Math.floor(average) <= 0.5) {
-    return Math.floor((average) + 1);
-  }
+  const target = Math.round(9.75 - (0.125 * wolfSum));
   
-  return Math.round((average) + 1);
+  return target
 }
 
 function setttingRole() {
@@ -60,6 +56,7 @@ function setttingRole() {
   const numberOfHunter = rolesAfterShuffle.findIndex(r => r === HUNTER) + 1;
   const numberOfIdiot = rolesAfterShuffle.findIndex(r => r === IDIOT) + 1;
   const allOfNumbersOfWolf = getAllIndexes(rolesAfterShuffle, WOLF);
+  const killNumber = conjectureFormula(allOfNumbersOfWolf);
   const sumOfNumberOfWolf = allOfNumbersOfWolf.reduce((prev, curr) => prev + curr, 0);
 
   const data = {
@@ -74,14 +71,17 @@ function setttingRole() {
     numberOfHunter,
     numberOfIdiot,
     allOfNumbersOfWolf,
-    isHitWitch: conjectureFormula(allOfNumbersOfWolf) === numberOfWitch,
-    isHitGod: (
-      conjectureFormula(allOfNumbersOfWolf) === numberOfSeer || 
-      conjectureFormula(allOfNumbersOfWolf) === numberOfWitch ||
-      conjectureFormula(allOfNumbersOfWolf) === numberOfHunter ||
-      conjectureFormula(allOfNumbersOfWolf) === numberOfIdiot
+    killNumber,
+    isKillWitch: killNumber === numberOfWitch,
+    isKillGod: (
+      killNumber === numberOfSeer || 
+      killNumber === numberOfWitch ||
+      killNumber === numberOfHunter ||
+      killNumber === numberOfIdiot
     ),
   }
+
+  console.log('result', result);
 
   return data;
 }
@@ -90,7 +90,7 @@ function runData() {
   var xData = [];
   var yData = [];
 
-  for (var i = 0 ; i < 1000 ; i++) {
+  for (var i = 0 ; i < 10000000 ; i++) {
     const data = setttingRole();
     xData.push(data.x);
     yData.push(data.y);
