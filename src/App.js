@@ -1,9 +1,13 @@
+import { setttingRole } from './utils/settingRole';
 import './App.css';
+
 
 function App() {
   return (
     <div className="App">
-      wolf
+      <button type="button" onClick={setttingRole}>
+        wolf
+      </button>
     </div>
   );
 }
