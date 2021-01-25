@@ -6,6 +6,7 @@ const WITCH = 'ROLE_WITCH';
 const HUNTER = 'ROLE_HUNTER';
 const IDIOT = 'ROLE_IDIOT';
 const VILLAGER = 'ROLE_VILLAGER';
+const times = 10000000;
 
 function getAllIndexes(arr, val) {
   var indexes = [], i = -1;
@@ -81,17 +82,18 @@ function setttingRole() {
     ),
   }
 
-  console.log('result', result);
-
-  return data;
+  return {
+    result,
+    data,
+  };
 }
 
 function runData() {
   var xData = [];
   var yData = [];
 
-  for (var i = 0 ; i < 10000000 ; i++) {
-    const data = setttingRole();
+  for (var i = 0 ; i < times ; i++) {
+    const { data } = setttingRole();
     xData.push(data.x);
     yData.push(data.y);
   }
@@ -100,6 +102,28 @@ function runData() {
     xData,
     yData,
   }
+}
+
+function getProbability() {
+  var killWitchCase = [];
+  var killGodCase = [];
+
+  for (var i = 0 ; i < times ; i++) {
+    const { result } = setttingRole();
+
+    if (result.isKillWitch) {
+      killWitchCase.push(i)
+    }
+
+    if (result.isKillGod) {
+      killGodCase.push(i)
+    }
+  }
+
+  const killWitchP = (killWitchCase.length / times) * 100;
+  const killGodP = (killGodCase.length / times) * 100;
+
+  console.log('P', killWitchP, killGodP);
 }
 
 function runLinearRegression() {
@@ -120,4 +144,5 @@ export {
   setttingRole,
   runData,
   runLinearRegression,
+  getProbability,
 }

@@ -1,4 +1,4 @@
-import { runLinearRegression, setttingRole } from './utils/settingRole';
+import { runLinearRegression, setttingRole, getProbability } from './utils/settingRole';
 import './App.css';
 
 
@@ -10,6 +10,9 @@ function App() {
       </button>
       <button type="button" onClick={runLinearRegression}>
         Linear Regression
+      </button>
+      <button type="button" onClick={getProbability}>
+        get Probability
       </button>
     </div>
   );
