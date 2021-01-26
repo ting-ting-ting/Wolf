@@ -1,11 +1,20 @@
 import React from 'react';
+import { 
+  WOLF,
+  SEER,
+  WITCH,
+  HUNTER,
+  IDIOT,
+  VILLAGER,
+} from '../utils/settingRole';
 
 const Seat = ({
-
+  role,
+  number,
 }) => {
   return (
     <div className="seat">
-      <p>1</p>
+      <p>{number}</p>
       <div className="role" />
     </div>
   );

@@ -1,29 +1,25 @@
 import React, { useState } from 'react';
-import { runLinearRegression, setttingRole, getProbability } from './utils/settingRole';
+import { setttingRole } from './utils/settingRole';
 import Seat from './components/Seat.jsx';
 import './App.css';
 
 function App() {
   const [roles, setRoles] = useState([]);
-console.log('roles', roles)
+  const firstCol = roles.slice(0, 6);
+  const SecondCol = roles.slice(6, 12);
+
   return (
     <div className="App">
       <div className="table">
         <div className="seat-col">
-          <Seat />
-          <Seat />
-          <Seat />
-          <Seat />
-          <Seat />
-          <Seat />
+          {firstCol.map((r, index) => (
+            <Seat key={r} role={r} number={index + 1} />
+          ))}
         </div>
         <div className="seat-col">
-          <Seat />
-          <Seat />
-          <Seat />
-          <Seat />
-          <Seat />
-          <Seat />
+          {SecondCol.map((r, index) => (
+            <Seat key={r} role={r} number={index + 7} />
+          ))}
         </div>
       </div>
       <div className="setting-role-btn-wrapper">
