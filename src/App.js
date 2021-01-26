@@ -13,12 +13,12 @@ function App() {
       <div className="table">
         <div className="seat-col">
           {firstCol.map((r, index) => (
-            <Seat key={r} role={r} number={index + 1} />
+            <Seat key={`${r}-${index}`} role={r} number={index + 1} />
           ))}
         </div>
         <div className="seat-col">
           {SecondCol.map((r, index) => (
-            <Seat key={r} role={r} number={index + 7} />
+            <Seat key={`${r}-${index}`} role={r} number={index + 7} />
           ))}
         </div>
       </div>
