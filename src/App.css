@@ -1,10 +1,11 @@
+/* table */
 .table {
   width: 500px;
   height: 500px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #f8f8f8;
+  background-color: #d8d8d8;
   padding: 50px;
 }
 
@@ -28,4 +29,22 @@
 
 .table .seat-col .seat span {
   color: #fff
+}
+
+/* button */
+.setting-role-btn-wrapper {
+  width: 500px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.setting-role-btn-wrapper button {
+  border: none;
+  color: #FFF;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 3px;
+  background-color: #13ab47;
+  padding: 6px 12px;
+  cursor: pointer;
 }
