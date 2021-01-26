@@ -8,9 +8,9 @@ const IDIOT = 'ROLE_IDIOT';
 const VILLAGER = 'ROLE_VILLAGER';
 const times = 10000000;
 
-function getAllIndexes(arr, val) {
+function getAllNumbers(arr, val) {
   var indexes = [], i = -1;
-  while ((i = arr.indexOf(val, i+1)) != -1){
+  while ((i = arr.indexOf(val, i+1)) !== -1){
       indexes.push(i + 1);
   }
   return indexes;
@@ -43,7 +43,12 @@ function linearRegression(y,x){
 
 function conjectureFormula(allOfNumbersOfWolf) {
   const wolfSum = allOfNumbersOfWolf.reduce((prev, curr) => prev + curr, 0);
-  const target = Math.round(9.75 - (0.125 * wolfSum));
+  let target = Math.round(9.75 - (0.125 * wolfSum));
+  let i = allOfNumbersOfWolf.indexOf(target);
+
+  while (i !== -1){
+    target += 1;
+  }
   
   return target
 }
@@ -56,14 +61,8 @@ function setttingRole() {
   const numberOfWitch = rolesAfterShuffle.findIndex(r => r === WITCH) + 1;
   const numberOfHunter = rolesAfterShuffle.findIndex(r => r === HUNTER) + 1;
   const numberOfIdiot = rolesAfterShuffle.findIndex(r => r === IDIOT) + 1;
-  const allOfNumbersOfWolf = getAllIndexes(rolesAfterShuffle, WOLF);
+  const allOfNumbersOfWolf = getAllNumbers(rolesAfterShuffle, WOLF);
   const killNumber = conjectureFormula(allOfNumbersOfWolf);
-  const sumOfNumberOfWolf = allOfNumbersOfWolf.reduce((prev, curr) => prev + curr, 0);
-
-  const data = {
-    x: sumOfNumberOfWolf,
-    y: numberOfWitch
-  }
 
   const result = {
     roles: rolesAfterShuffle,
@@ -82,10 +81,23 @@ function setttingRole() {
     ),
   }
 
-  return {
-    result,
-    data,
-  };
+  return result;
+}
+
+function settingData() {
+  const roles = [WOLF, WOLF, WOLF, WOLF, SEER, WITCH, HUNTER, IDIOT, VILLAGER, VILLAGER, VILLAGER, VILLAGER];
+
+  const rolesAfterShuffle = shuffle(roles);
+  const numberOfWitch = rolesAfterShuffle.findIndex(r => r === WITCH) + 1;
+  const allOfNumbersOfWolf = getAllNumbers(rolesAfterShuffle, WOLF);
+  const sumOfNumberOfWolf = allOfNumbersOfWolf.reduce((prev, curr) => prev + curr, 0);
+
+  const data = {
+    x: sumOfNumberOfWolf,
+    y: numberOfWitch
+  }
+
+  return data;
 }
 
 function runData() {
@@ -93,7 +105,7 @@ function runData() {
   var yData = [];
 
   for (var i = 0 ; i < times ; i++) {
-    const { data } = setttingRole();
+    const data = settingData();
     xData.push(data.x);
     yData.push(data.y);
   }
@@ -109,7 +121,7 @@ function getProbability() {
   var killGodCase = [];
 
   for (var i = 0 ; i < times ; i++) {
-    const { result } = setttingRole();
+    const result = setttingRole();
 
     if (result.isKillWitch) {
       killWitchCase.push(i)
