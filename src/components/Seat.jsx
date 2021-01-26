@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { 
   WOLF,
   SEER,
@@ -19,6 +19,9 @@ const Seat = ({
   role,
   number,
 }) => {
+  const isWolf = role === WOLF;
+  const [isOpened, setCardOpened] = useState(isWolf);
+
   const getRoleImage = () => {
     switch (role) {
       case WOLF:
@@ -40,15 +43,19 @@ const Seat = ({
         return villager;
     
       default:
-        return null;
+        return back;
     }
   }
 
   return (
     <div className="seat">
       <p>{number}</p>
-      <div className="role">
-        <img src={getRoleImage()} />
+      <div className="role" onClick={() => setCardOpened(true)}>
+        {isOpened ? (
+          <img src={getRoleImage()} />
+        ) : (
+          <img src={back} />
+        )}
       </div>
     </div>
   );
