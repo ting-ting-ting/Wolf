@@ -44,9 +44,9 @@ function linearRegression(y,x){
 function conjectureFormula(allOfNumbersOfWolf) {
   const wolfSum = allOfNumbersOfWolf.reduce((prev, curr) => prev + curr, 0);
   let target = Math.round(9.75 - (0.125 * wolfSum));
-  let i = allOfNumbersOfWolf.indexOf(target);
+  let i = -1;
 
-  while (i !== -1){
+  while ((i = allOfNumbersOfWolf.indexOf(target)) !== -1){
     target += 1;
   }
   
