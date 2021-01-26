@@ -13,6 +13,7 @@ import witch from '../images/witch.jpeg';
 import hunter from '../images/hunter.png';
 import idiot from '../images/idiot.png';
 import villager from '../images/villager.jpeg';
+import back from '../images/back.jpeg';
 
 const Seat = ({
   role,
