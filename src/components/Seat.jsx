@@ -5,7 +5,7 @@ const Seat = ({
 }) => {
   return (
     <div className="seat">
-      Seat
+      <span>Seat</span>
     </div>
   );
 }
