@@ -5,7 +5,8 @@ const Seat = ({
 }) => {
   return (
     <div className="seat">
-      <span>Seat</span>
+      <p>1</p>
+      <div className="role" />
     </div>
   );
 }
