@@ -1,0 +1,16 @@
+.table {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f8f8f8;
+}
+
+.table .seat-col {
+
+}
+
+.table .seat-col .seat {
+  
+}

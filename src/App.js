@@ -1,19 +1,29 @@
 import { runLinearRegression, setttingRole, getProbability } from './utils/settingRole';
+import Seat from './components/Seat.jsx';
 import './App.css';
 
 
 function App() {
   return (
     <div className="App">
-      <button type="button" onClick={setttingRole}>
-        role setting
-      </button>
-      <button type="button" onClick={runLinearRegression}>
-        Linear Regression
-      </button>
-      <button type="button" onClick={getProbability}>
-        get Probability
-      </button>
+      <div className="table">
+        <div className="seat-col">
+          <Seat />
+          <Seat />
+          <Seat />
+          <Seat />
+          <Seat />
+          <Seat />
+        </div>
+        <div className="seat-col">
+          <Seat />
+          <Seat />
+          <Seat />
+          <Seat />
+          <Seat />
+          <Seat />
+        </div>
+      </div>
     </div>
   );
 }
