@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/wolf-kill/static/css/main.a0fff2ff.chunk.css",
+    "main.js": "/wolf-kill/static/js/main.a2c52e30.chunk.js",
+    "main.js.map": "/wolf-kill/static/js/main.a2c52e30.chunk.js.map",
+    "runtime-main.js": "/wolf-kill/static/js/runtime-main.d89605cf.js",
+    "runtime-main.js.map": "/wolf-kill/static/js/runtime-main.d89605cf.js.map",
+    "static/js/2.26fb4bff.chunk.js": "/wolf-kill/static/js/2.26fb4bff.chunk.js",
+    "static/js/2.26fb4bff.chunk.js.map": "/wolf-kill/static/js/2.26fb4bff.chunk.js.map",
+    "static/js/3.cff0227f.chunk.js": "/wolf-kill/static/js/3.cff0227f.chunk.js",
+    "static/js/3.cff0227f.chunk.js.map": "/wolf-kill/static/js/3.cff0227f.chunk.js.map",
+    "index.html": "/wolf-kill/index.html",
+    "static/css/main.a0fff2ff.chunk.css.map": "/wolf-kill/static/css/main.a0fff2ff.chunk.css.map",
+    "static/js/2.26fb4bff.chunk.js.LICENSE.txt": "/wolf-kill/static/js/2.26fb4bff.chunk.js.LICENSE.txt",
+    "static/media/back.1ffe94da.jpeg": "/wolf-kill/static/media/back.1ffe94da.jpeg",
+    "static/media/hunter.c7b703e7.png": "/wolf-kill/static/media/hunter.c7b703e7.png",
+    "static/media/idiot.075fc1e3.png": "/wolf-kill/static/media/idiot.075fc1e3.png",
+    "static/media/seer.62a0b321.png": "/wolf-kill/static/media/seer.62a0b321.png",
+    "static/media/villager.f299b295.jpeg": "/wolf-kill/static/media/villager.f299b295.jpeg",
+    "static/media/witch.10f0d309.jpeg": "/wolf-kill/static/media/witch.10f0d309.jpeg",
+    "static/media/wolf.80ba4a91.jpg": "/wolf-kill/static/media/wolf.80ba4a91.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d89605cf.js",
+    "static/js/2.26fb4bff.chunk.js",
+    "static/css/main.a0fff2ff.chunk.css",
+    "static/js/main.a2c52e30.chunk.js"
+  ]
+}
