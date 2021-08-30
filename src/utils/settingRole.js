@@ -32,7 +32,7 @@ function linearRegression(y,x){
       sum_xy += (x[i]*y[i]);
       sum_xx += (x[i]*x[i]);
       sum_yy += (y[i]*y[i]);
-  } 
+  }
 
   lr['slope'] = (n * sum_xy - sum_x * sum_y) / (n*sum_xx - sum_x * sum_x);
   lr['intercept'] = (sum_y - lr.slope * sum_x)/n;
@@ -49,7 +49,7 @@ function conjectureFormula(allOfNumbersOfWolf) {
   while ((i = allOfNumbersOfWolf.indexOf(target)) !== -1){
     target += 1;
   }
-  
+
   return target
 }
 
@@ -57,28 +57,28 @@ function setttingRole() {
   const roles = [WOLF, WOLF, WOLF, WOLF, SEER, WITCH, HUNTER, IDIOT, VILLAGER, VILLAGER, VILLAGER, VILLAGER];
 
   const rolesAfterShuffle = shuffle(roles);
-  const numberOfSeer = rolesAfterShuffle.findIndex(r => r === SEER) + 1;
-  const numberOfWitch = rolesAfterShuffle.findIndex(r => r === WITCH) + 1;
-  const numberOfHunter = rolesAfterShuffle.findIndex(r => r === HUNTER) + 1;
-  const numberOfIdiot = rolesAfterShuffle.findIndex(r => r === IDIOT) + 1;
-  const allOfNumbersOfWolf = getAllNumbers(rolesAfterShuffle, WOLF);
-  const killNumber = conjectureFormula(allOfNumbersOfWolf);
+  // const numberOfSeer = rolesAfterShuffle.findIndex(r => r === SEER) + 1;
+  // const numberOfWitch = rolesAfterShuffle.findIndex(r => r === WITCH) + 1;
+  // const numberOfHunter = rolesAfterShuffle.findIndex(r => r === HUNTER) + 1;
+  // const numberOfIdiot = rolesAfterShuffle.findIndex(r => r === IDIOT) + 1;
+  // const allOfNumbersOfWolf = getAllNumbers(rolesAfterShuffle, WOLF);
+  // const killNumber = conjectureFormula(allOfNumbersOfWolf);
 
   const result = {
     roles: rolesAfterShuffle,
-    numberOfSeer,
-    numberOfWitch,
-    numberOfHunter,
-    numberOfIdiot,
-    allOfNumbersOfWolf,
-    killNumber,
-    isKillWitch: killNumber === numberOfWitch,
-    isKillGod: (
-      killNumber === numberOfSeer || 
-      killNumber === numberOfWitch ||
-      killNumber === numberOfHunter ||
-      killNumber === numberOfIdiot
-    ),
+    // numberOfSeer,
+    // numberOfWitch,
+    // numberOfHunter,
+    // numberOfIdiot,
+    // allOfNumbersOfWolf,
+    // killNumber,
+    // isKillWitch: killNumber === numberOfWitch,
+    // isKillGod: (
+    //   killNumber === numberOfSeer ||
+    //   killNumber === numberOfWitch ||
+    //   killNumber === numberOfHunter ||
+    //   killNumber === numberOfIdiot
+    // ),
   }
 
   return result;
