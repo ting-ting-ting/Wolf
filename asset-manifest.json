@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Wolf/static/css/main.a0fff2ff.chunk.css",
+    "main.css": "/Wolf/static/css/main.14911415.chunk.css",
     "main.js": "/Wolf/static/js/main.a2c52e30.chunk.js",
     "main.js.map": "/Wolf/static/js/main.a2c52e30.chunk.js.map",
     "runtime-main.js": "/Wolf/static/js/runtime-main.3d8f8d31.js",
@@ -10,7 +10,7 @@
     "static/js/3.cff0227f.chunk.js": "/Wolf/static/js/3.cff0227f.chunk.js",
     "static/js/3.cff0227f.chunk.js.map": "/Wolf/static/js/3.cff0227f.chunk.js.map",
     "index.html": "/Wolf/index.html",
-    "static/css/main.a0fff2ff.chunk.css.map": "/Wolf/static/css/main.a0fff2ff.chunk.css.map",
+    "static/css/main.14911415.chunk.css.map": "/Wolf/static/css/main.14911415.chunk.css.map",
     "static/js/2.26fb4bff.chunk.js.LICENSE.txt": "/Wolf/static/js/2.26fb4bff.chunk.js.LICENSE.txt",
     "static/media/back.1ffe94da.jpeg": "/Wolf/static/media/back.1ffe94da.jpeg",
     "static/media/hunter.c7b703e7.png": "/Wolf/static/media/hunter.c7b703e7.png",
@@ -23,7 +23,7 @@
   "entrypoints": [
     "static/js/runtime-main.3d8f8d31.js",
     "static/js/2.26fb4bff.chunk.js",
-    "static/css/main.a0fff2ff.chunk.css",
+    "static/css/main.14911415.chunk.css",
     "static/js/main.a2c52e30.chunk.js"
   ]
 }
