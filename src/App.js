@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { uniqueId } from 'lodash';
 import { setttingRole } from './utils/settingRole';
 import Seat from './components/Seat.jsx';
@@ -14,6 +14,10 @@ function App() {
   const [mode, setMode] = useState(WOLF_MODE);
   const firstCol = roles.slice(0, 6);
   const SecondCol = roles.slice(6, 12);
+
+  useEffect(() => {
+    setRoles([]);
+  }, [mode]);
 
   return (
     <div className="App">
