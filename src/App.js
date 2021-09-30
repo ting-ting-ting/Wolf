@@ -4,8 +4,13 @@ import { setttingRole } from './utils/settingRole';
 import Seat from './components/Seat.jsx';
 import './App.css';
 
+const WOLF_MODE = 'WOLF_MODE';
+const SEER_MODE = 'SEER_MODE';
+const WITCH_MODE = 'WITCH_MODE';
+
 function App() {
   const [roles, setRoles] = useState([]);
+  const [mode, setMode] = useState(WOLF_MODE);
   const firstCol = roles.slice(0, 6);
   const SecondCol = roles.slice(6, 12);
 
