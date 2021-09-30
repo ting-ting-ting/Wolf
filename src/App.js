@@ -30,9 +30,15 @@ function App() {
         </div>
       </div>
       <div className="mode-selector">
-        <button type="button" onClick={() => setMode(WOLF_MODE)}>狼人模式</button>
-        <button type="button" onClick={() => setMode(SEER_MODE)}>預言家模式</button>
-        <button type="button" onClick={() => setMode(WITCH_MODE)}>女巫模式</button>
+        <button type="button" className={mode === WOLF_MODE ? 'is-active' : ''} onClick={() => setMode(WOLF_MODE)}>
+          狼人模式
+        </button>
+        <button type="button" className={mode === SEER_MODE ? 'is-active' : ''} onClick={() => setMode(SEER_MODE)}>
+          預言家模式
+        </button>
+        <button type="button" className={mode === WITCH_MODE ? 'is-active' : ''} onClick={() => setMode(WITCH_MODE)}>
+          女巫模式
+        </button>
       </div>
       <div className="setting-role-btn-wrapper">
         <button type="button" onClick={() => setRoles(setttingRole().roles)}>發牌</button>
