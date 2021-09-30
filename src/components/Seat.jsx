@@ -5,12 +5,14 @@ import {
   WITCH,
   HUNTER,
   IDIOT,
+  GUARD,
   VILLAGER,
 } from '../utils/settingRole';
 import {
   WOLF_MODE,
   SEER_MODE,
   WITCH_MODE,
+  GUARD_MODE,
 } from '../constants';
 import wolf from '../images/wolf.jpg';
 import seer from '../images/seer.png';
@@ -36,8 +38,11 @@ const Seat = ({
       case WITCH_MODE:
         return role === WITCH;
 
+      case GUARD_MODE:
+        return role === GUARD;
+
       default:
-        break;
+        return role === WOLF;
     }
   }
   const [isOpened, setCardOpened] = useState(getOpenedRole());

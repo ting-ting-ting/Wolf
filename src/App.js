@@ -3,9 +3,14 @@ import { uniqueId } from 'lodash';
 import { setttingRole } from './utils/settingRole';
 import Seat from './components/Seat.jsx';
 import {
+  IDIOT,
+  GUARD,
+} from './utils/settingRole';
+import {
   WOLF_MODE,
   SEER_MODE,
   WITCH_MODE,
+  GUARD_MODE,
 } from './constants';
 import './App.css';
 
@@ -18,6 +23,8 @@ function App() {
   useEffect(() => {
     setRoles([]);
   }, [mode]);
+
+  const originRoles = setttingRole(mode === GUARD_MODE ? GUARD : IDIOT).roles;
 
   return (
     <div className="App">
@@ -45,7 +52,7 @@ function App() {
         </button>
       </div>
       <div className="setting-role-btn-wrapper">
-        <button type="button" onClick={() => setRoles(setttingRole().roles)}>發牌</button>
+        <button type="button" onClick={() => setRoles(originRoles)}>發牌</button>
       </div>
     </div>
   );
