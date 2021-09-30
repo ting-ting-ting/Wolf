@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { 
+import {
   WOLF,
   SEER,
   WITCH,
@@ -7,6 +7,11 @@ import {
   IDIOT,
   VILLAGER,
 } from '../utils/settingRole';
+import {
+  WOLF_MODE,
+  SEER_MODE,
+  WITCH_MODE,
+} from '../constants';
 import wolf from '../images/wolf.jpg';
 import seer from '../images/seer.png';
 import witch from '../images/witch.jpeg';
@@ -17,10 +22,25 @@ import back from '../images/back.jpeg';
 
 const Seat = ({
   role,
+  mode,
   number,
 }) => {
-  const isWolf = role === WOLF;
-  const [isOpened, setCardOpened] = useState(isWolf);
+  const getOpenedRole = () => {
+    switch (mode) {
+      case WOLF_MODE:
+        return role === WOLF;
+
+      case SEER_MODE:
+        return role === SEER;
+
+      case WITCH_MODE:
+        return role === WITCH;
+
+      default:
+        break;
+    }
+  }
+  const [isOpened, setCardOpened] = useState(getOpenedRole());
 
   const getRoleImage = () => {
     switch (role) {
@@ -41,7 +61,7 @@ const Seat = ({
 
       case VILLAGER:
         return villager;
-    
+
       default:
         return back;
     }
