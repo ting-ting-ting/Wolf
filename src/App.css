@@ -66,10 +66,21 @@
 @media screen and (max-width: 600px){
   .table {
     width: auto;
+    height: auto;
+    padding: 10px 15px;
   }
 
   .setting-role-btn-wrapper {
     width: auto;
     margin-top: 20px;
+  }
+
+  .table .seat-col p {
+    margin: 0;
+  }
+
+  .table .seat-col .seat .role img {
+    width: 75px;
+    height: 60px;
   }
 }
