@@ -19,6 +19,7 @@ import seer from '../images/seer.png';
 import witch from '../images/witch.jpeg';
 import hunter from '../images/hunter.png';
 import idiot from '../images/idiot.png';
+import guard from '../images/guard.jpeg';
 import villager from '../images/villager.jpeg';
 import back from '../images/back.jpeg';
 
@@ -63,6 +64,9 @@ const Seat = ({
 
       case IDIOT:
         return idiot;
+
+      case GUARD:
+        return guard;
 
       case VILLAGER:
         return villager;
