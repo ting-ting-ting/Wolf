@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import { uniqueId } from 'lodash';
 import { setttingRole } from './utils/settingRole';
 import Seat from './components/Seat.jsx';
+import {
+  WOLF_MODE,
+  SEER_MODE,
+  WITCH_MODE,
+} from './constants';
 import './App.css';
-
-const WOLF_MODE = 'WOLF_MODE';
-const SEER_MODE = 'SEER_MODE';
-const WITCH_MODE = 'WITCH_MODE';
 
 function App() {
   const [roles, setRoles] = useState([]);
@@ -19,14 +20,19 @@ function App() {
       <div className="table">
         <div className="seat-col">
           {firstCol.map((r, index) => (
-            <Seat key={uniqueId(`${r}-${index + 1}`)} role={r} number={index + 1} />
+            <Seat key={uniqueId(`${r}-${index + 1}`)} role={r} number={index + 1} mode={mode} />
           ))}
         </div>
         <div className="seat-col">
           {SecondCol.map((r, index) => (
-            <Seat key={uniqueId(`${r}-${index + 7}`)} role={r} number={index + 7} />
+            <Seat key={uniqueId(`${r}-${index + 7}`)} role={r} number={index + 7} mode={mode} />
           ))}
         </div>
+      </div>
+      <div className="mode-selector">
+        <button type="button" onClick={() => setMode(WOLF_MODE)}>狼人模式</button>
+        <button type="button" onClick={() => setMode(SEER_MODE)}>預言家模式</button>
+        <button type="button" onClick={() => setMode(WITCH_MODE)}>女巫模式</button>
       </div>
       <div className="setting-role-btn-wrapper">
         <button type="button" onClick={() => setRoles(setttingRole().roles)}>發牌</button>
