@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Wolf/static/css/main.8d40074a.chunk.css",
-    "main.js": "/Wolf/static/js/main.5b1e43b1.chunk.js",
-    "main.js.map": "/Wolf/static/js/main.5b1e43b1.chunk.js.map",
+    "main.css": "/Wolf/static/css/main.6a952029.chunk.css",
+    "main.js": "/Wolf/static/js/main.2132adb1.chunk.js",
+    "main.js.map": "/Wolf/static/js/main.2132adb1.chunk.js.map",
     "runtime-main.js": "/Wolf/static/js/runtime-main.3d8f8d31.js",
     "runtime-main.js.map": "/Wolf/static/js/runtime-main.3d8f8d31.js.map",
     "static/js/2.26fb4bff.chunk.js": "/Wolf/static/js/2.26fb4bff.chunk.js",
@@ -10,9 +10,10 @@
     "static/js/3.cff0227f.chunk.js": "/Wolf/static/js/3.cff0227f.chunk.js",
     "static/js/3.cff0227f.chunk.js.map": "/Wolf/static/js/3.cff0227f.chunk.js.map",
     "index.html": "/Wolf/index.html",
-    "static/css/main.8d40074a.chunk.css.map": "/Wolf/static/css/main.8d40074a.chunk.css.map",
+    "static/css/main.6a952029.chunk.css.map": "/Wolf/static/css/main.6a952029.chunk.css.map",
     "static/js/2.26fb4bff.chunk.js.LICENSE.txt": "/Wolf/static/js/2.26fb4bff.chunk.js.LICENSE.txt",
     "static/media/back.1ffe94da.jpeg": "/Wolf/static/media/back.1ffe94da.jpeg",
+    "static/media/guard.ec72b20d.jpeg": "/Wolf/static/media/guard.ec72b20d.jpeg",
     "static/media/hunter.c7b703e7.png": "/Wolf/static/media/hunter.c7b703e7.png",
     "static/media/idiot.075fc1e3.png": "/Wolf/static/media/idiot.075fc1e3.png",
     "static/media/seer.62a0b321.png": "/Wolf/static/media/seer.62a0b321.png",
@@ -23,7 +24,7 @@
   "entrypoints": [
     "static/js/runtime-main.3d8f8d31.js",
     "static/js/2.26fb4bff.chunk.js",
-    "static/css/main.8d40074a.chunk.css",
-    "static/js/main.5b1e43b1.chunk.js"
+    "static/css/main.6a952029.chunk.css",
+    "static/js/main.2132adb1.chunk.js"
   ]
 }
