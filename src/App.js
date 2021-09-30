@@ -50,6 +50,9 @@ function App() {
         <button type="button" className={mode === WITCH_MODE ? 'is-active' : ''} onClick={() => setMode(WITCH_MODE)}>
           女巫模式
         </button>
+        <button type="button" className={mode === GUARD_MODE ? 'is-active' : ''} onClick={() => setMode(GUARD_MODE)}>
+          守衛模式
+        </button>
       </div>
       <div className="setting-role-btn-wrapper">
         <button type="button" onClick={() => setRoles(originRoles)}>發牌</button>

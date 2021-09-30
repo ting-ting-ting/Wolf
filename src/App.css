@@ -74,11 +74,11 @@
 .mode-selector button {
   border: none;
   color: #FFF;
-  font-size: 18px;
-  line-height: 25px;
+  font-size: 14px;
+  line-height: 20px;
   border-radius: 3px;
   background-color: #888;
-  padding: 6px 12px;
+  padding: 3px 6px;
   margin: 0 5px;
   cursor: pointer;
 }
