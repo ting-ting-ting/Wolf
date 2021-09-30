@@ -5,6 +5,7 @@ const SEER = 'ROLE_SEER';
 const WITCH = 'ROLE_WITCH';
 const HUNTER = 'ROLE_HUNTER';
 const IDIOT = 'ROLE_IDIOT';
+const GUARD = 'ROLE_GUARD';
 const VILLAGER = 'ROLE_VILLAGER';
 const times = 10000000;
 
@@ -152,6 +153,7 @@ export {
   WITCH,
   HUNTER,
   IDIOT,
+  GUARD,
   VILLAGER,
   setttingRole,
   runData,
