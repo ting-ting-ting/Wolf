@@ -81,9 +81,9 @@ const Seat = ({
       <p>{number}</p>
       <div className="role" onClick={() => setCardOpened(true)}>
         {isOpened ? (
-          <img src={getRoleImage()} />
+          <img src={getRoleImage()} alt="role" />
         ) : (
-          <img src={back} />
+          <img src={back} alt="back" />
         )}
       </div>
     </div>
