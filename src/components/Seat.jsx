@@ -25,6 +25,7 @@ import guard from '../images/guard.jpeg';
 import villager from '../images/villager.jpeg';
 import bwolf from '../images/bwolf.jpeg';
 import back from '../images/back.jpeg';
+import rainbowman from '../images/rainbowman.jpeg';
 
 const Seat = ({
   role,
@@ -94,6 +95,9 @@ const Seat = ({
           <img src={getRoleImage()} alt="role" />
         ) : (
           <img src={back} alt="back" />
+        )}
+        {isRainbow && (
+          <img className="rainbow-overlay" src={rainbowman} alt="rainbowman" />
         )}
       </div>
     </div>

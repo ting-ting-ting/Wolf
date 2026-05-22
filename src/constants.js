@@ -3,3 +3,4 @@ export const SEER_MODE = 'SEER_MODE';
 export const WITCH_MODE = 'WITCH_MODE';
 export const GUARD_MODE = 'GUARD_MODE';
 export const BIG_WOLF_MODE = 'BIG_WOLF_MODE';
+export const RAINBOW_MODE = 'RAINBOW_MODE';

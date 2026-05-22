@@ -1,5 +1,5 @@
 import { shuffle } from 'lodash';
-import { WOLF_MODE, WITCH_MODE, GUARD_MODE, BIG_WOLF_MODE } from '../constants'
+import { WOLF_MODE, WITCH_MODE, GUARD_MODE, BIG_WOLF_MODE, RAINBOW_MODE } from '../constants'
 
 const WOLF = 'ROLE_WOLF';
 const SEER = 'ROLE_SEER';
@@ -88,7 +88,7 @@ function setttingRole(mode) {
 
   let rainbowIndex = -1;
 
-  if (!mode || mode === WOLF_MODE) {
+  if (mode === RAINBOW_MODE) {
     const nonWolfIndices = rolesAfterShuffle
       .map((r, i) => r !== WOLF ? i : -1)
       .filter(i => i !== -1);

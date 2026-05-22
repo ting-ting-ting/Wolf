@@ -8,6 +8,7 @@ import {
   WITCH_MODE,
   GUARD_MODE,
   BIG_WOLF_MODE,
+  RAINBOW_MODE,
 } from './constants';
 import './App.css';
 
@@ -56,6 +57,9 @@ function App() {
         </button>
         <button type="button" className={mode === BIG_WOLF_MODE ? 'is-active' : ''} onClick={() => setMode(BIG_WOLF_MODE)}>
           機械狼模式
+        </button>
+        <button type="button" className={mode === RAINBOW_MODE ? 'is-active' : ''} onClick={() => setMode(RAINBOW_MODE)}>
+          彩虹人模式
         </button>
       </div>
       <div className="setting-role-btn-wrapper">
