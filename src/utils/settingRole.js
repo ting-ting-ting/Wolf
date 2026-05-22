@@ -1,4 +1,5 @@
 import { shuffle } from 'lodash';
+import { WITCH_MODE, GUARD_MODE, BIG_WOLF_MODE } from '../constants'
 
 const WOLF = 'ROLE_WOLF';
 const SEER = 'ROLE_SEER';
@@ -7,6 +8,7 @@ const HUNTER = 'ROLE_HUNTER';
 const IDIOT = 'ROLE_IDIOT';
 const GUARD = 'ROLE_GUARD';
 const VILLAGER = 'ROLE_VILLAGER';
+const BIG_WOLF = 'ROLE_BIG_WOLF';
 const times = 10000000;
 
 function getAllNumbers(arr, val) {
@@ -54,8 +56,27 @@ function conjectureFormula(allOfNumbersOfWolf) {
   return target
 }
 
-function setttingRole(fourthGod) {
-  const roles = [WOLF, WOLF, WOLF, WOLF, SEER, WITCH, HUNTER, fourthGod, VILLAGER, VILLAGER, VILLAGER, VILLAGER];
+function setttingRole(mode) {
+  const baseRoles = [WOLF, WOLF, WOLF, SEER, WITCH, HUNTER, VILLAGER, VILLAGER, VILLAGER, VILLAGER];
+  const roles = (() => {
+    switch (mode) {
+      case WITCH_MODE:
+      case GUARD_MODE:
+      case BIG_WOLF_MODE:
+        return [
+          ...baseRoles,
+          BIG_WOLF,
+          GUARD,
+        ];
+
+      default:
+       return [
+          ...baseRoles,
+          WOLF,
+          IDIOT,
+       ];
+    }
+  })();
 
   const rolesAfterShuffle = shuffle(roles);
   // const numberOfSeer = rolesAfterShuffle.findIndex(r => r === SEER) + 1;
@@ -155,6 +176,7 @@ export {
   IDIOT,
   GUARD,
   VILLAGER,
+  BIG_WOLF,
   setttingRole,
   runData,
   runLinearRegression,

@@ -7,12 +7,14 @@ import {
   IDIOT,
   GUARD,
   VILLAGER,
+  BIG_WOLF,
 } from '../utils/settingRole';
 import {
   WOLF_MODE,
   SEER_MODE,
   WITCH_MODE,
   GUARD_MODE,
+  BIG_WOLF_MODE,
 } from '../constants';
 import wolf from '../images/wolf.jpg';
 import seer from '../images/seer.png';
@@ -21,6 +23,7 @@ import hunter from '../images/hunter.png';
 import idiot from '../images/idiot.png';
 import guard from '../images/guard.jpeg';
 import villager from '../images/villager.jpeg';
+import bwolf from '../images/bwolf.jpeg';
 import back from '../images/back.jpeg';
 
 const Seat = ({
@@ -41,6 +44,9 @@ const Seat = ({
 
       case GUARD_MODE:
         return role === GUARD;
+
+      case BIG_WOLF_MODE:
+        return role === BIG_WOLF;
 
       default:
         return role === WOLF;
@@ -70,6 +76,9 @@ const Seat = ({
 
       case VILLAGER:
         return villager;
+
+      case BIG_WOLF:
+        return bwolf;
 
       default:
         return back;
