@@ -26,7 +26,7 @@ import guard from '../images/guard.jpeg';
 import villager from '../images/villager.jpeg';
 import bwolf from '../images/bwolf.jpeg';
 import back from '../images/back.jpeg';
-import rainbowman from '../images/rainbowman.jpeg';
+import rainbowman from '../images/rainbowman.jpg';
 
 const Seat = ({
   role,
