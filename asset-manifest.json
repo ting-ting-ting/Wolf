@@ -1,30 +1,23 @@
 {
   "files": {
-    "main.css": "/Wolf/static/css/main.6a952029.chunk.css",
-    "main.js": "/Wolf/static/js/main.2132adb1.chunk.js",
-    "main.js.map": "/Wolf/static/js/main.2132adb1.chunk.js.map",
-    "runtime-main.js": "/Wolf/static/js/runtime-main.3d8f8d31.js",
-    "runtime-main.js.map": "/Wolf/static/js/runtime-main.3d8f8d31.js.map",
-    "static/js/2.26fb4bff.chunk.js": "/Wolf/static/js/2.26fb4bff.chunk.js",
-    "static/js/2.26fb4bff.chunk.js.map": "/Wolf/static/js/2.26fb4bff.chunk.js.map",
-    "static/js/3.cff0227f.chunk.js": "/Wolf/static/js/3.cff0227f.chunk.js",
-    "static/js/3.cff0227f.chunk.js.map": "/Wolf/static/js/3.cff0227f.chunk.js.map",
+    "main.css": "/Wolf/static/css/main.7dc3cd60.css",
+    "main.js": "/Wolf/static/js/main.04d410b4.js",
+    "static/js/422.c9b1c20d.chunk.js": "/Wolf/static/js/422.c9b1c20d.chunk.js",
+    "static/media/idiot.png": "/Wolf/static/media/idiot.075fc1e31d9f27c0d27e.png",
+    "static/media/wolf.jpg": "/Wolf/static/media/wolf.80ba4a91e05e642eabd3.jpg",
+    "static/media/guard.jpeg": "/Wolf/static/media/guard.ec72b20dbb8b8788b841.jpeg",
+    "static/media/villager.jpeg": "/Wolf/static/media/villager.f299b295d5575aa70138.jpeg",
+    "static/media/seer.png": "/Wolf/static/media/seer.62a0b32165f7afa944a8.png",
+    "static/media/back.jpeg": "/Wolf/static/media/back.1ffe94da9586efae9ce7.jpeg",
+    "static/media/hunter.png": "/Wolf/static/media/hunter.c7b703e7420436a76a20.png",
+    "static/media/witch.jpeg": "/Wolf/static/media/witch.10f0d309c2cc4764c589.jpeg",
     "index.html": "/Wolf/index.html",
-    "static/css/main.6a952029.chunk.css.map": "/Wolf/static/css/main.6a952029.chunk.css.map",
-    "static/js/2.26fb4bff.chunk.js.LICENSE.txt": "/Wolf/static/js/2.26fb4bff.chunk.js.LICENSE.txt",
-    "static/media/back.1ffe94da.jpeg": "/Wolf/static/media/back.1ffe94da.jpeg",
-    "static/media/guard.ec72b20d.jpeg": "/Wolf/static/media/guard.ec72b20d.jpeg",
-    "static/media/hunter.c7b703e7.png": "/Wolf/static/media/hunter.c7b703e7.png",
-    "static/media/idiot.075fc1e3.png": "/Wolf/static/media/idiot.075fc1e3.png",
-    "static/media/seer.62a0b321.png": "/Wolf/static/media/seer.62a0b321.png",
-    "static/media/villager.f299b295.jpeg": "/Wolf/static/media/villager.f299b295.jpeg",
-    "static/media/witch.10f0d309.jpeg": "/Wolf/static/media/witch.10f0d309.jpeg",
-    "static/media/wolf.80ba4a91.jpg": "/Wolf/static/media/wolf.80ba4a91.jpg"
+    "main.7dc3cd60.css.map": "/Wolf/static/css/main.7dc3cd60.css.map",
+    "main.04d410b4.js.map": "/Wolf/static/js/main.04d410b4.js.map",
+    "422.c9b1c20d.chunk.js.map": "/Wolf/static/js/422.c9b1c20d.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.3d8f8d31.js",
-    "static/js/2.26fb4bff.chunk.js",
-    "static/css/main.6a952029.chunk.css",
-    "static/js/main.2132adb1.chunk.js"
+    "static/css/main.7dc3cd60.css",
+    "static/js/main.04d410b4.js"
   ]
 }
