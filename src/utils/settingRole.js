@@ -1,5 +1,5 @@
 import { shuffle } from 'lodash';
-import { WITCH_MODE, GUARD_MODE, BIG_WOLF_MODE } from '../constants'
+import { WOLF_MODE, WITCH_MODE, GUARD_MODE, BIG_WOLF_MODE } from '../constants'
 
 const WOLF = 'ROLE_WOLF';
 const SEER = 'ROLE_SEER';
@@ -86,8 +86,19 @@ function setttingRole(mode) {
   // const allOfNumbersOfWolf = getAllNumbers(rolesAfterShuffle, WOLF);
   // const killNumber = conjectureFormula(allOfNumbersOfWolf);
 
+  let rainbowIndex = -1;
+
+  if (!mode || mode === WOLF_MODE) {
+    const nonWolfIndices = rolesAfterShuffle
+      .map((r, i) => r !== WOLF ? i : -1)
+      .filter(i => i !== -1);
+
+    rainbowIndex = nonWolfIndices[Math.floor(Math.random() * nonWolfIndices.length)];
+  }
+
   const result = {
     roles: rolesAfterShuffle,
+    rainbowIndex,
     // numberOfSeer,
     // numberOfWitch,
     // numberOfHunter,

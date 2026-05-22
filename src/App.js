@@ -13,27 +13,31 @@ import './App.css';
 
 function App() {
   const [roles, setRoles] = useState([]);
+  const [rainbowIndex, setRainbowIndex] = useState(-1);
   const [mode, setMode] = useState(WOLF_MODE);
   const firstCol = roles.slice(0, 6);
   const SecondCol = roles.slice(6, 12);
 
   useEffect(() => {
     setRoles([]);
+    setRainbowIndex(-1);
   }, [mode]);
 
-  const originRoles = setttingRole(mode).roles;
+  const settingResult = setttingRole(mode);
+  const originRoles = settingResult.roles;
+  const originRainbowIndex = settingResult.rainbowIndex;
 
   return (
     <div className="App">
       <div className="table">
         <div className="seat-col">
           {firstCol.map((r, index) => (
-            <Seat key={uniqueId(`${r}-${index + 1}`)} role={r} number={index + 1} mode={mode} />
+            <Seat key={uniqueId(`${r}-${index + 1}`)} role={r} number={index + 1} mode={mode} isRainbow={index === rainbowIndex} />
           ))}
         </div>
         <div className="seat-col">
           {SecondCol.map((r, index) => (
-            <Seat key={uniqueId(`${r}-${index + 7}`)} role={r} number={index + 7} mode={mode} />
+            <Seat key={uniqueId(`${r}-${index + 7}`)} role={r} number={index + 7} mode={mode} isRainbow={index + 6 === rainbowIndex} />
           ))}
         </div>
       </div>
@@ -55,7 +59,7 @@ function App() {
         </button>
       </div>
       <div className="setting-role-btn-wrapper">
-        <button type="button" onClick={() => setRoles(originRoles)}>發牌</button>
+        <button type="button" onClick={() => { setRoles(originRoles); setRainbowIndex(originRainbowIndex); }}>發牌</button>
       </div>
     </div>
   );

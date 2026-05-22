@@ -30,6 +30,7 @@ const Seat = ({
   role,
   mode,
   number,
+  isRainbow,
 }) => {
   const getOpenedRole = () => {
     switch (mode) {
@@ -86,7 +87,7 @@ const Seat = ({
   }
 
   return (
-    <div className="seat">
+    <div className={`seat${isRainbow ? ' is-rainbow' : ''}`}>
       <p>{number}</p>
       <div className="role" onClick={() => setCardOpened(true)}>
         {isOpened ? (
