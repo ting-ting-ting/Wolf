@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/Wolf/static/css/main.1c840ef5.css",
-    "main.js": "/Wolf/static/js/main.5c2768d7.js",
-    "static/js/422.2334b533.chunk.js": "/Wolf/static/js/422.2334b533.chunk.js",
+    "main.css": "/Wolf/static/css/main.054120e3.css",
+    "main.js": "/Wolf/static/js/main.7a4171ef.js",
+    "static/js/422.c9b1c20d.chunk.js": "/Wolf/static/js/422.c9b1c20d.chunk.js",
     "static/media/idiot.png": "/Wolf/static/media/idiot.075fc1e31d9f27c0d27e.png",
+    "static/media/rainbowman.jpg": "/Wolf/static/media/rainbowman.a572042c4441ff41aa0b.jpg",
     "static/media/wolf.jpg": "/Wolf/static/media/wolf.80ba4a91e05e642eabd3.jpg",
     "static/media/guard.jpeg": "/Wolf/static/media/guard.ec72b20dbb8b8788b841.jpeg",
     "static/media/villager.jpeg": "/Wolf/static/media/villager.f299b295d5575aa70138.jpeg",
@@ -12,14 +13,13 @@
     "static/media/hunter.png": "/Wolf/static/media/hunter.c7b703e7420436a76a20.png",
     "static/media/witch.jpeg": "/Wolf/static/media/witch.10f0d309c2cc4764c589.jpeg",
     "static/media/bwolf.jpeg": "/Wolf/static/media/bwolf.0b11088ebe7173ab45ed.jpeg",
-    "static/media/rainbowman.jpeg": "/Wolf/static/media/rainbowman.b2e4800fb9edc461fdd4.jpeg",
     "index.html": "/Wolf/index.html",
-    "main.1c840ef5.css.map": "/Wolf/static/css/main.1c840ef5.css.map",
-    "main.5c2768d7.js.map": "/Wolf/static/js/main.5c2768d7.js.map",
-    "422.2334b533.chunk.js.map": "/Wolf/static/js/422.2334b533.chunk.js.map"
+    "main.054120e3.css.map": "/Wolf/static/css/main.054120e3.css.map",
+    "main.7a4171ef.js.map": "/Wolf/static/js/main.7a4171ef.js.map",
+    "422.c9b1c20d.chunk.js.map": "/Wolf/static/js/422.c9b1c20d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1c840ef5.css",
-    "static/js/main.5c2768d7.js"
+    "static/css/main.054120e3.css",
+    "static/js/main.7a4171ef.js"
   ]
 }
