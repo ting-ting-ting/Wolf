@@ -99,7 +99,7 @@ const Seat = ({
           <img src={back} alt="back" />
         )}
         {isRainbow && (
-          <img className="rainbow-overlay" src={rainbowman} alt="rainbowman" />
+          <img className={`rainbow-overlay${isOpened ? ' is-opened' : ''}`} src={rainbowman} alt="rainbowman" />
         )}
       </div>
     </div>

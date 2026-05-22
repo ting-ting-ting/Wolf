@@ -52,6 +52,10 @@
   pointer-events: none;
 }
 
+.table .seat-col .seat .role .rainbow-overlay.is-opened {
+  opacity: 0.2;
+}
+
 .table .seat-col .seat .role img {
   width: 75px;
   height: 60px;
