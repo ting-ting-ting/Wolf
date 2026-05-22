@@ -1,5 +1,5 @@
 import { shuffle } from 'lodash';
-import { WOLF_MODE, WITCH_MODE, GUARD_MODE, BIG_WOLF_MODE, RAINBOW_MODE } from '../constants'
+import { WITCH_MODE, GUARD_MODE, BIG_WOLF_MODE, RAINBOW_MODE } from '../constants'
 
 const WOLF = 'ROLE_WOLF';
 const SEER = 'ROLE_SEER';
@@ -63,6 +63,7 @@ function setttingRole(mode) {
       case WITCH_MODE:
       case GUARD_MODE:
       case BIG_WOLF_MODE:
+      case RAINBOW_MODE:
         return [
           ...baseRoles,
           BIG_WOLF,

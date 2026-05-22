@@ -15,6 +15,7 @@ import {
   WITCH_MODE,
   GUARD_MODE,
   BIG_WOLF_MODE,
+  RAINBOW_MODE,
 } from '../constants';
 import wolf from '../images/wolf.jpg';
 import seer from '../images/seer.png';
@@ -36,6 +37,7 @@ const Seat = ({
   const getOpenedRole = () => {
     switch (mode) {
       case WOLF_MODE:
+      case RAINBOW_MODE:
         return role === WOLF;
 
       case SEER_MODE:
